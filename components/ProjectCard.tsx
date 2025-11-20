@@ -10,7 +10,7 @@ import type { Project } from "@/data/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="border-border/40 dark:border-border/20 flex h-full flex-col overflow-hidden border transition-shadow hover:-translate-y-1 hover:shadow-lg">
+    <Card className="animated-border-card border-border/40 dark:border-border/20 flex h-full flex-col overflow-hidden rounded-xl border transition-shadow transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
       <div className="relative w-full overflow-hidden">
         <Image
           src={project.image}
@@ -20,6 +20,7 @@ export function ProjectCard({ project }: { project: Project }) {
           className="aspect-[16/9] w-full object-cover"
         />
       </div>
+
       <CardHeader className="space-y-2 px-4 py-3.5">
         <h3 className="text-base font-semibold tracking-tight">
           {project.title}
@@ -28,6 +29,7 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.description}
         </p>
       </CardHeader>
+
       <CardContent className="flex-1 px-4 pt-0 pb-3">
         <div className="flex flex-wrap gap-1.5">
           {project.tech.map((t) => (
@@ -40,6 +42,7 @@ export function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       </CardContent>
+
       <CardFooter className="text-muted-foreground border-border/40 flex items-center justify-between border-t px-4 py-2.5 text-xs sm:text-sm">
         <div className="flex items-center gap-3">
           <a

@@ -84,13 +84,17 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  --ab-color: #595416;       /* yellow-400 */
+  --ab-thickness: 0.5px;       /* line thickness */
+  --ab-radius: 0.75rem;      /* match your card rounding */
+  --ab-duration: 1200ms;     /* full loop time */
 }
 
 .dark {
   --background: #050d21;
   --alternate-background: #02081a;
   --foreground: #f5f1ec;
-  --card: #0b1224;
+  --card: #0f1a30;
   --card-foreground: #f5f1ec;
   --popover: #0f1a30;
   --popover-foreground: #f5f1ec;
@@ -119,6 +123,10 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
+  --ab-color: #ecd26a;       /* yellow-400 */
+  --ab-thickness: 0.5px;       /* line thickness */
+  --ab-radius: 0.75rem;      /* match your card rounding */
+  --ab-duration: 1200ms;     /* full loop time */
 }
 
 @layer base {
@@ -167,3 +175,42 @@
     opacity: 0.3;
   }
 }
+
+
+.animated-border-card {
+  position: relative;
+  border-radius: var(--ab-radius);
+}
+
+/* Border layer that animates around the edges */
+.animated-border-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-sizing: border-box;
+  border: var(--ab-thickness) solid transparent; /* keeps radius clean */
+
+  /* 4 edges as separate gradients */
+  background:
+    /* top */    linear-gradient(90deg, var(--ab-color), var(--ab-color)) top left / 0% var(--ab-thickness) no-repeat,
+    /* right */  linear-gradient(180deg, var(--ab-color), var(--ab-color)) top right / var(--ab-thickness) 0% no-repeat,
+    /* bottom */ linear-gradient(90deg, var(--ab-color), var(--ab-color)) bottom right / 0% var(--ab-thickness) no-repeat,
+    /* left */   linear-gradient(180deg, var(--ab-color), var(--ab-color)) bottom left / var(--ab-thickness) 0% no-repeat;
+
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.animated-border-card:hover::after,
+.animated-border-card:focus-visible::after {
+  opacity: 1;
+  animation: ab-walk var(--ab-duration) linear infinite;
+}
+
+/* Subtle neon glow on hover */
+.animated-border-card:hover {
+  box-shadow: 0 0 10px var(--ab-color);
+}
+

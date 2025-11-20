@@ -9,7 +9,7 @@ export type Project = {
   
   export const projects: Project[] = [
     {
-      title: "Personal Portfolio",
+      title: "Jade.AI",
       description:
         "A modern developer portfolio built with Next.js 14, TailwindCSS, and shadcn/ui components.",
       tech: ["Next.js", "TailwindCSS", "TypeScript", "shadcn/ui"],
@@ -18,7 +18,7 @@ export type Project = {
       image: "/images/yucode.jpg",
     },
     {
-      title: "Task Manager App",
+      title: "MindOrbit",
       description:
         "A sleek to-do app with persistent storage, drag-and-drop tasks, and dark mode.",
       tech: ["React", "Zustand", "Vite", "TailwindCSS"],
@@ -27,7 +27,7 @@ export type Project = {
       image: "/images/me.jpeg",
     },
     {
-      title: "AI Blog Generator",
+      title: "YuCode",
       description:
         "Generate SEO-friendly blog posts with AI, built on the OpenAI API.",
       tech: ["Next.js", "OpenAI API", "Supabase", "TailwindCSS"],
@@ -36,7 +36,7 @@ export type Project = {
       image: "/images/ai-blog.png",
     },
     {
-      title: "Live Collaboration Whiteboard",
+      title: "Gita",
       description:
         "Real-time brainstorming canvas with multiplayer cursors, sticky notes, and audio rooms.",
       tech: ["Next.js", "Convex", "WebRTC", "TailwindCSS"],
@@ -45,7 +45,7 @@ export type Project = {
       image: "/images/me2.jpg",
     },
     {
-      title: "Crypto Insights Dashboard",
+      title: "SJ Snap",
       description:
         "Data-rich dashboard with streaming prices, AI-written summaries, and custom alerts.",
       tech: ["Next.js", "tRPC", "Prisma", "PlanetScale"],
@@ -54,7 +54,7 @@ export type Project = {
       image: "/images/me3.jpg",
     },
     {
-      title: "Studio Booking Platform",
+      title: "StockSearch",
       description:
         "Bookings, payments, and CRM for creative studios with email automations.",
       tech: ["Remix", "PostgreSQL", "Stripe", "TailwindCSS"],

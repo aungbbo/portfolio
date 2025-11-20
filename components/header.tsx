@@ -47,10 +47,11 @@ export function Header() {
               href={item.href}
               target={item.newTab ? "_blank" : undefined}
               rel={item.newTab ? "noreferrer" : undefined}
-              className="text-muted-foreground hover:bg-muted/60 hover:text-foreground rounded-full px-3 py-1.5 transition"
+              className="group text-muted-foreground hover:text-foreground relative rounded-full px-3 py-1.5 transition"
               onClick={handleNavigate}
             >
-              {item.label}
+              <span className="relative z-10">{item.label}</span>
+              <span className="bg-primary pointer-events-none absolute inset-x-2 bottom-1 h-[2px] w-0 rounded-full transition-all duration-300 group-hover:w-[calc(100%-1rem)]" />
             </Link>
           ))}
         </nav>
