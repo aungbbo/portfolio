@@ -1,4 +1,5 @@
-import Header from "@/components/Header";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -30,6 +31,10 @@ export default function Home() {
 
         <div className="px-6 py-16 sm:px-16 md:px-24 lg:px-48">
           <ContactSection />
+        </div>
+
+        <div className="bg-alternate-background px-6 py-16 sm:px-16 md:px-24 lg:px-48">
+          <Footer />
         </div>
       </main>
     </div>

@@ -22,7 +22,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Contact", href: "#contact" },
 ];
 
-export default function Header() {
+export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const handleToggle = () => setIsOpen((prev) => !prev);
