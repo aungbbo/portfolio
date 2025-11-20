@@ -10,31 +10,37 @@ import type { Project } from "@/data/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="overflow-hidden border border-gray-200 transition-shadow hover:shadow-md dark:border-gray-800">
-      <Image
-        src={project.image}
-        alt={project.title}
-        width={600}
-        height={400}
-        className="h-48 w-full object-cover"
-      />
-      <CardHeader>
-        <h3 className="text-lg font-semibold">{project.title}</h3>
-        <p className="text-muted-foreground text-sm">{project.description}</p>
+    <Card className="border-border/40 dark:border-border/20 flex h-full flex-col overflow-hidden border transition-shadow hover:-translate-y-1 hover:shadow-xl">
+      <div className="relative w-full overflow-hidden">
+        <Image
+          src={project.image}
+          alt={project.title}
+          width={600}
+          height={400}
+          className="aspect-[4/3] w-full rounded-b-none object-cover"
+        />
+      </div>
+      <CardHeader className="space-y-3">
+        <h3 className="text-xl font-semibold tracking-tight">
+          {project.title}
+        </h3>
+        <p className="text-muted-foreground text-sm leading-relaxed">
+          {project.description}
+        </p>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex-1">
         <div className="flex flex-wrap gap-2">
           {project.tech.map((t) => (
             <span
               key={t}
-              className="bg-muted rounded-md px-2 py-1 text-xs font-medium"
+              className="bg-muted rounded-full px-3 py-1 text-xs font-medium"
             >
               {t}
             </span>
           ))}
         </div>
       </CardContent>
-      <CardFooter className="text-muted-foreground flex items-center justify-between text-sm">
+      <CardFooter className="text-muted-foreground border-border/50 flex items-center justify-between border-t px-6 py-4 text-sm">
         <div className="flex items-center gap-3">
           <a
             href={project.github}
@@ -51,9 +57,6 @@ export function ProjectCard({ project }: { project: Project }) {
             <ExternalLink className="h-4 w-4" /> Live
           </a>
         </div>
-        {project.notes && (
-          <span className="text-xs italic">{project.notes}</span>
-        )}
       </CardFooter>
     </Card>
   );

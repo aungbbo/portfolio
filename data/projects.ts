@@ -4,7 +4,6 @@ export type Project = {
     tech: string[]
     github: string
     link: string
-    notes?: string
     image: string
   }
   
@@ -16,7 +15,6 @@ export type Project = {
       tech: ["Next.js", "TailwindCSS", "TypeScript", "shadcn/ui"],
       github: "https://github.com/yourname/portfolio",
       link: "https://yourdomain.com",
-      notes: "Deployed on Vercel with dynamic routes.",
       image: "/images/yucode.jpg",
     },
     {
@@ -26,7 +24,6 @@ export type Project = {
       tech: ["React", "Zustand", "Vite", "TailwindCSS"],
       github: "https://github.com/yourname/task-manager",
       link: "https://tasks.yourdomain.com",
-      notes: "Uses Zustand for lightweight state management.",
       image: "/images/me.jpeg",
     },
     {
@@ -36,7 +33,6 @@ export type Project = {
       tech: ["Next.js", "OpenAI API", "Supabase", "TailwindCSS"],
       github: "https://github.com/yourname/ai-blog-generator",
       link: "https://aiblog.yourdomain.com",
-      notes: "Auth and DB handled by Supabase.",
       image: "/images/ai-blog.png",
     },
     {
@@ -46,7 +42,6 @@ export type Project = {
       tech: ["Next.js", "Convex", "WebRTC", "TailwindCSS"],
       github: "https://github.com/yourname/live-whiteboard",
       link: "https://whiteboard.yourdomain.com",
-      notes: "Optimized for low latency with CRDT syncing.",
       image: "/images/me2.jpg",
     },
     {
@@ -56,7 +51,6 @@ export type Project = {
       tech: ["Next.js", "tRPC", "Prisma", "PlanetScale"],
       github: "https://github.com/yourname/crypto-insights",
       link: "https://crypto.yourdomain.com",
-      notes: "Features theming + personalized watchlists.",
       image: "/images/me3.jpg",
     },
     {
@@ -66,7 +60,6 @@ export type Project = {
       tech: ["Remix", "PostgreSQL", "Stripe", "TailwindCSS"],
       github: "https://github.com/yourname/studio-booking",
       link: "https://studio.yourdomain.com",
-      notes: "Includes admin analytics and audit logs.",
       image: "/images/me4.jpg",
     },
   ]

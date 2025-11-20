@@ -6,11 +6,11 @@ import { Github, Linkedin } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-export function Hero() {
+export function HeroSection() {
   return (
     <section
       id="hero"
-      className="grid items-center gap-10 p-6 md:p-10 lg:grid-cols-[1.1fr_minmax(0,0.9fr)]"
+      className="grid items-center gap-10 p-6 md:p-0 lg:grid-cols-[1.1fr_minmax(0,0.9fr)]"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
