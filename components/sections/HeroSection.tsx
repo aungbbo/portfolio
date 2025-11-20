@@ -16,7 +16,7 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="space-y-6"
+        className="order-2 space-y-6 lg:order-1"
       >
         <div className="space-y-4">
           <div className="space-y-2">
@@ -43,7 +43,7 @@ export function HeroSection() {
               className="border-border/70 hover:bg-border/30 rounded-full border px-5 py-2 text-base"
             >
               <a
-                href="https://linkedin.com/in/yourname"
+                href="https://linkedin.com/in/aungbbo"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2"
@@ -58,7 +58,7 @@ export function HeroSection() {
               className="border-border/70 hover:bg-border/30 rounded-full border px-5 py-2 text-base"
             >
               <a
-                href="https://github.com/yourname"
+                href="https://github.com/aungbbo"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2"
@@ -75,7 +75,7 @@ export function HeroSection() {
         initial={{ opacity: 0, scale: 0.92 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        className="relative mx-auto w-full max-w-sm"
+        className="relative order-1 mx-auto w-full max-w-sm lg:order-2"
       >
         <div className="from-primary/25 to-primary/5 relative aspect-[4/5] w-full overflow-hidden rounded-[32px] bg-gradient-to-br via-transparent p-1">
           <div className="pointer-events-none absolute inset-0 -z-10 blur-3xl">

@@ -1,4 +1,8 @@
+"use client";
+
+import * as React from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./theme-toggle";
@@ -19,9 +23,14 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 export default function Header() {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const handleToggle = () => setIsOpen((prev) => !prev);
+  const handleNavigate = () => setIsOpen(false);
+
   return (
-    <header className="fixed inset-x-0 top-4 z-50 px-4 md:px-8">
-      <div className="supports-[backdrop-filter]:bg-background/50 border-primary/30 from-secondary/35 via-secondary/20 to-secondary/35 shadow-primary/5 dark:border-primary/40 dark:from-card/70 dark:via-card/60 dark:to-card/70 flex w-full items-center justify-between rounded-full border bg-gradient-to-r px-6 py-3 shadow-inner backdrop-blur-2xl">
+    <header className="fixed inset-x-0 top-4 z-50 sm:px-16 md:px-20 lg:px-36">
+      <div className="supports-[backdrop-filter]:bg-background/10 border-primary/30 from-secondary/35 via-secondary/20 to-secondary/35 shadow-primary/5 dark:border-primary/40 dark:from-card/70 dark:via-card/60 dark:to-card/70 flex w-full items-center justify-between rounded-full border bg-gradient-to-r px-4 py-3 shadow-inner backdrop-blur-2xl sm:px-6">
         <Link
           href="#top"
           className="flex items-center gap-2 text-sm font-semibold tracking-normal uppercase"
@@ -39,6 +48,7 @@ export default function Header() {
               target={item.newTab ? "_blank" : undefined}
               rel={item.newTab ? "noreferrer" : undefined}
               className="text-muted-foreground hover:bg-muted/60 hover:text-foreground rounded-full px-3 py-1.5 transition"
+              onClick={handleNavigate}
             >
               {item.label}
             </Link>
@@ -46,15 +56,34 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button
-            asChild
-            size="sm"
-            variant="outline"
-            className="hidden md:inline-flex"
-          ></Button>
           <ThemeToggle />
+          <button
+            type="button"
+            aria-label="Toggle navigation"
+            className="border-border/60 text-muted-foreground hover:text-foreground rounded-full border p-2 transition md:hidden"
+            onClick={handleToggle}
+          >
+            {isOpen ? <X className="size-4" /> : <Menu className="size-4" />}
+          </button>
         </div>
       </div>
+
+      {isOpen && (
+        <div className="border-border/60 bg-background/95 mt-3 flex flex-col gap-2 rounded-2xl border p-4 text-sm shadow-xl shadow-black/10 backdrop-blur md:hidden">
+          {NAV_ITEMS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              target={item.newTab ? "_blank" : undefined}
+              rel={item.newTab ? "noreferrer" : undefined}
+              className="text-muted-foreground hover:bg-muted/40 hover:text-foreground rounded-xl px-3 py-2 transition"
+              onClick={handleNavigate}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
     </header>
   );
 }

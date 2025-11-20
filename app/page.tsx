@@ -11,12 +11,26 @@ export default function Home() {
     <div id="top" className="bg-background text-foreground min-h-screen w-full">
       <Header />
 
-      <main className="flex w-full flex-col gap-24 px-6 pt-32 pb-24 sm:px-12 md:px-16 lg:px-32">
-        <HeroSection />
-        <AboutSection />
-        <ExperiencesSection />
-        <ProjectsSection projects={projects} />
-        <ContactSection />
+      <main className="flex w-full flex-col pt-24">
+        <div className="px-6 pb-28 sm:px-28 sm:pt-12 md:px-24 md:pt-16 lg:px-48 lg:pt-24">
+          <HeroSection />
+        </div>
+
+        <div className="bg-alternate-background px-6 py-16 pt-16 sm:px-16 md:px-24 lg:px-48">
+          <AboutSection />
+        </div>
+
+        <div className="px-6 py-16 sm:px-16 md:px-24 lg:px-48">
+          <ExperiencesSection />
+        </div>
+
+        <div className="bg-alternate-background px-6 py-16 pb-24 sm:px-16 md:px-20 lg:px-36">
+          <ProjectsSection projects={projects} />
+        </div>
+
+        <div className="px-6 py-16 sm:px-16 md:px-24 lg:px-48">
+          <ContactSection />
+        </div>
       </main>
     </div>
   );

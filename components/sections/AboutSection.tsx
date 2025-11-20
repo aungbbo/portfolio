@@ -29,7 +29,19 @@ export function AboutSection() {
         <h2 className="text-4xl font-semibold tracking-tight">Who am I?</h2>
       </div>
 
-      <div className="text-muted-foreground grid gap-4 text-sm">
+      <div className="order-1 space-y-6 text-center md:order-2">
+        <h3 className="text-4xl font-semibold tracking-tight">
+          Curious, detail-oriented, calm
+        </h3>
+        <p className="text-muted-foreground text-lg">
+          I obsess over micro-interactions, performance budgets, and the
+          narrative of a product. When I&apos;m not prototyping, I&apos;m
+          sketching motion systems, studying typography, or tweaking my dev
+          tooling to stay fast.
+        </p>
+      </div>
+
+      <div className="text-muted-foreground order-1 grid gap-4 text-sm md:order-2">
         {aboutHighlights.map((item) => (
           <div
             key={item.title}
@@ -41,18 +53,6 @@ export function AboutSection() {
             <p>{item.description}</p>
           </div>
         ))}
-      </div>
-
-      <div className="space-y-6 text-center">
-        <h3 className="text-4xl font-semibold tracking-tight">
-          Curious, detail-oriented, calm
-        </h3>
-        <p className="text-muted-foreground text-lg">
-          I obsess over micro-interactions, performance budgets, and the
-          narrative of a product. When I&apos;m not prototyping, I&apos;m
-          sketching motion systems, studying typography, or tweaking my dev
-          tooling to stay fast.
-        </p>
       </div>
     </section>
   );
