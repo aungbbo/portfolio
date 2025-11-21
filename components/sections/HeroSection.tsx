@@ -83,7 +83,7 @@ export function HeroSection() {
           </div>
           <div className="relative h-full w-full overflow-hidden rounded-[28px]">
             <Image
-              src="/images/me.jpg"
+              src="/images/profile.jpg"
               alt="Portrait of Aung Bo Bo"
               fill
               priority

@@ -12,7 +12,7 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
           What I've built
         </h2>
       </div>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-12 sm:grid-cols-2">
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}

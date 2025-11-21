@@ -13,28 +13,38 @@ export default function Home() {
       <Header />
 
       <main className="flex w-full flex-col pt-24">
-        <div className="px-6 pb-28 sm:px-28 sm:pt-12 md:px-24 md:pt-16 lg:px-48 lg:pt-24">
+        <div className="mx-auto w-full max-w-5xl px-6 pt-10 pb-16 sm:px-10 sm:pt-16 md:px-16 md:pt-20 lg:px-20 lg:pb-24">
           <HeroSection />
         </div>
 
-        <div className="bg-alternate-background px-6 py-16 pt-16 sm:px-16 md:px-24 lg:px-48">
-          <AboutSection />
+        <div className="bg-alternate-background py-16">
+          <div className="mx-auto w-full max-w-5xl px-6 sm:px-10 lg:px-20">
+            <AboutSection />
+          </div>
         </div>
 
-        <div className="px-6 py-16 sm:px-16 md:px-24 lg:px-48">
-          <ExperiencesSection />
+        <div className="py-16">
+          <div className="mx-auto w-full max-w-5xl px-6 sm:px-10 lg:px-20">
+            <ExperiencesSection />
+          </div>
         </div>
 
-        <div className="bg-alternate-background px-6 py-16 pb-24 sm:px-16 md:px-20 lg:px-36">
-          <ProjectsSection projects={projects} />
+        <div className="bg-alternate-background py-16">
+          <div className="mx-auto w-full max-w-5xl px-6 sm:px-10 lg:px-28">
+            <ProjectsSection projects={projects} />
+          </div>
         </div>
 
-        <div className="px-6 py-16 sm:px-16 md:px-24 lg:px-48">
-          <ContactSection />
+        <div className="py-16">
+          <div className="mx-auto w-full max-w-5xl px-6 sm:px-10 lg:px-20">
+            <ContactSection />
+          </div>
         </div>
 
-        <div className="bg-alternate-background px-6 py-16 sm:px-16 md:px-24 lg:px-48">
-          <Footer />
+        <div className="bg-alternate-background py-16">
+          <div className="mx-auto w-full max-w-5xl px-6 sm:px-10 lg:px-20">
+            <Footer />
+          </div>
         </div>
       </main>
     </div>

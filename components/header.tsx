@@ -29,8 +29,8 @@ export function Header() {
   const handleNavigate = () => setIsOpen(false);
 
   return (
-    <header className="fixed inset-x-0 top-4 z-50 sm:px-16 md:px-20 lg:px-36">
-      <div className="supports-[backdrop-filter]:bg-background/10 border-primary/30 from-secondary/35 via-secondary/20 to-secondary/35 shadow-primary/5 dark:border-primary/40 dark:from-card/70 dark:via-card/60 dark:to-card/70 flex w-full items-center justify-between rounded-full border bg-gradient-to-r px-4 py-3 shadow-inner backdrop-blur-2xl sm:px-6">
+    <header className="fixed inset-x-0 top-4 z-50 px-4 sm:px-6 lg:px-12">
+      <div className="supports-[backdrop-filter]:bg-background/10 border-primary/30 from-secondary/35 via-secondary/20 to-secondary/35 shadow-primary/5 dark:border-primary/40 dark:from-card/70 dark:via-card/60 dark:to-card/70 mx-auto flex w-full max-w-5xl items-center justify-between rounded-full border bg-gradient-to-r px-4 py-3 shadow-inner backdrop-blur-2xl">
         <Link
           href="#top"
           className="flex items-center gap-2 text-sm font-semibold tracking-normal uppercase"
