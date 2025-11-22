@@ -20,6 +20,12 @@ export function HeroSection() {
       >
         <div className="space-y-4">
           <div className="space-y-2">
+            <div className="inline-flex items-center gap-4 text-[11px] font-semibold tracking-[0.65em] uppercase">
+              <span className="via-primary/40 h-px w-12 bg-gradient-to-r from-transparent to-transparent" />
+              <span className="from-primary/80 via-primary to-primary/70 bg-gradient-to-r bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(180,139,74,0.35)]">
+                Hi, my name is
+              </span>
+            </div>
             <h1 className="text-4xl leading-tight font-bold sm:text-5xl lg:text-6xl">
               Aung Bo Bo
             </h1>
@@ -27,16 +33,15 @@ export function HeroSection() {
               Software Engineer
             </p>
           </div>
-          <p className="text-muted-foreground text-lg">
-            Building immersive digital products with a blend of engineering
-            precision and design intuition. I translate complex ideas into
-            interfaces that feel effortless, inclusive, and fast.
+          <p className="text-muted-foreground pt-4 text-lg">
+            I design and develop experiences that connect people and technology.
+            Every line of code is a step forward because I believe in ...
           </p>
-          <p className="text-primary/90 dark:text-primary text-base tracking-wide italic">
-            — Progress over perfection.
+          <p className="text-primary/90 dark:text-primary pb-4 text-base tracking-wide italic">
+            "Progress over perfection"
           </p>
           <hr className="border-border/60" />
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 pt-4">
             <Button
               asChild
               variant="ghost"

@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "Trekteria is an AI-powered camping planner app that creates personalized itineraries based on user preferences and location. It helps travelers discover the best campsites, routes, and activities through intelligent, data-driven recommendations.",
     tech: ["React Native", "Expo", "Gemini API", "Supabase", "SQLite", "RESTful APIs"],
     github: "https://github.com/Trekteria/trekteria",
-    link: "https://trekteria.com",
+    link: "https://apps.apple.com/us/app/trekteria-outdoors-planner/id6745873086",
     image: "/images/trekteria.jpg",
   },
   {
